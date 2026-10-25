@@ -2,6 +2,39 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.7] - 2026-10-25
+- Exclude `.claude` local settings from git and from the npm package
+
+## [2.1.6] - 2026-10-25
+- deviceId auto-detection: log stderr, stdout, exit code and timeout when `phipsair` fails
+- deviceId auto-detection: retry up to 3 times before giving up
+- Fall back to the cached deviceId (same IP) instead of removing the accessory from HomeKit when auto-detection fails
+- Rename the "Auto+" switch to "Auto Plus" (the old name was rejected by HAP-NodeJS); the old service is removed automatically
+
+## [2.1.5] - 2026-02-01
+- Buffer `phipsair` output and process complete lines only, fixing JSON parse errors on split data
+
+## [2.1.4] - 2026-02-01
+- README formatting improvements
+
+## [2.1.3] - 2026-02-01
+- `onPollData` log moved to debug level
+- Added contributor information to the README
+
+## [2.1.2] - 2026-02-01
+- deviceId auto-detection from the IP address (`deviceId` is no longer required)
+- Check at startup that `phipsair` is installed
+- Docker installation instructions (startup script installing `phipsair`)
+
+## [2.1.1] - 2026-02-01
+- Added beep control option (`enableBeep`)
+- Updated device model handling for SmartFanHeater
+
+## [2.1.0] - 2026-01-31
+- Added support for the CX3120/01 model alongside CX5120/11
+- Added `model` option (`auto`, `CX5120`, `CX3120`) and `enableBacklight` option
+- Plugin published as `homebridge-philipsairplus-platform-jeko` (fork of André Vieira's plugin)
+
 ## [2.0.9] - 2025-11-25
 - Update dependencies
 
