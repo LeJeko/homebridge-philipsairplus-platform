@@ -127,3 +127,6 @@ dist
 
 # Test JSON states
 _json_states/
+
+# Claude Code local files
+.claude/settings.local.json
